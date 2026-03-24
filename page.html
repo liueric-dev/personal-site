@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#pong">Pong</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h1>Eric Liu</h1>
+        <p>Full-stack developer passionate about building cool things. Based in Austin, TX. Coffee enthusiast and retro gaming fan.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <span>HTML/CSS</span><span>JavaScript</span>
+            <span>Python</span><span>React</span>
+            <span>Node.js</span><span>SQL</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Weather App</h3>
+            <p>Real-time weather using OpenWeather API</p>
+        </div>
+        <div class="project-card">
+            <h3>Task Manager</h3>
+            <p>Full-stack todo app with React + Node</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>📧 ericliu@pursuit.com</p>
+        <p>💼 linkedin.com/in/ericliu</p>
+        <p>🐙 github.com/ericliu</p>
+    </section>
+
+    <section id="pong">
+        <h2>Pong</h2>
+        <div id="pong-controls">
+            <button onclick="startGame(1)">1 Player</button>
+            <button onclick="startGame(2)">2 Players</button>
+            <button onclick="resetGame()">Reset</button>
+        </div>
+        <div id="score-display">
+            <span id="score1">0</span> : <span id="score2">0</span>
+        </div>
+        <canvas id="pongCanvas" width="800" height="400"></canvas>
+        <div id="pong-instructions">
+            <p>1P: W/S keys | 2P: W/S vs ↑/↓</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
