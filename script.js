@@ -120,3 +120,33 @@ function loop() {
 
 // Draw initial screen
 draw();
+
+// Message Form Handler
+const messageForm = document.getElementById('messageForm');
+const formStatus = document.getElementById('formStatus');
+
+messageForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('messageName').value;
+    const email = document.getElementById('messageEmail').value;
+    const title = document.getElementById('messageTitle').value;
+    const body = document.getElementById('messageBody').value;
+    
+    formStatus.textContent = 'Sending...';
+    formStatus.className = 'form-status';
+    
+    // Using mailto fallback - in production, integrate with a backend service
+    const mailtoLink = `mailto:ericliu@pursuit.org?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${body}`)}`;
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    formStatus.textContent = '✓ Message ready to send (email client opening)';
+    formStatus.className = 'form-status success';
+    
+    // Clear form
+    setTimeout(() => {
+        messageForm.reset();
+        formStatus.textContent = '';
+    }, 2000);
+});

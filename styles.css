@@ -57,4 +57,80 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; color: #00ff88; }
 .project-card {
     background: #111;
     border: 1px solid #333;
-    padding: 1.5rem;
+    padding: 1.5rem;    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.message-form {
+    background: #111;
+    border: 1px solid #00ff88;
+    padding: 2rem;
+    border-radius: 4px;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    background: #0a0a0a;
+    border: 1px solid #333;
+    color: #00ff88;
+    padding: 0.75rem;
+    font-family: 'Courier New', monospace;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00ff88;
+}
+
+.submit-btn {
+    background: #00ff88;
+    color: #0a0a0a;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Courier New', monospace;
+}
+
+.submit-btn:hover {
+    background: #00dd66;
+}
+
+.submit-btn:active {
+    background: #00bb44;
+}
+
+.form-status {
+    margin-top: 1rem;
+    text-align: center;
+    min-height: 1.5rem;
+    font-weight: bold;
+}
+
+.form-status.success {
+    color: #00ff88;
+}
+
+.form-status.error {
+    color: #ff6b6b;
+}

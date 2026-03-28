@@ -13,13 +13,14 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#message">Message</a></li>
             <li><a href="#pong">Pong</a></li>
         </ul>
     </nav>
 
     <section id="about">
         <h1>Eric Liu</h1>
-        <p>Full-stack developer passionate about building cool things. Based in Austin, TX. Coffee enthusiast and retro gaming fan.</p>
+        <p>Full-stack developer passionate about building cool things. Based in New York City. Tea enthusiast and retro gaming fan.</p>
     </section>
 
     <section id="skills">
@@ -66,6 +67,31 @@
         </div>
     </section>
 
+    <section id="message">
+        <h2>Message Me</h2>
+        <form id="messageForm" class="message-form">
+            <div class="form-group">
+                <label for="messageName">Name:</label>
+                <input type="text" id="messageName" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="messageEmail">Email:</label>
+                <input type="email" id="messageEmail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="messageTitle">Title:</label>
+                <input type="text" id="messageTitle" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="messageBody">Body:</label>
+                <textarea id="messageBody" name="body" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+            <div id="formStatus" class="form-status"></div>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
